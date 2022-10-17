@@ -3,7 +3,7 @@ package android.ptc.com.ptcflixing.model.objects
 import com.google.gson.annotations.SerializedName
 
 
-data class Results(
+data class SearchResult(
 
     @SerializedName("sku") var sku: String? = null,
     @SerializedName("name") var name: String? = null,

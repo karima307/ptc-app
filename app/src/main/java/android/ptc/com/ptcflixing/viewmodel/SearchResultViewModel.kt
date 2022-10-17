@@ -12,7 +12,7 @@ class SearchResultViewModel(
     apiService: ApiService,
 
     ):ViewModel() {
-    val imagesList = Pager(PagingConfig(pageSize = 10)) {
+    val searchResult = Pager(PagingConfig(pageSize = 20)) {
         SearchResultData(apiService)
     }.flow.cachedIn(viewModelScope)
 }

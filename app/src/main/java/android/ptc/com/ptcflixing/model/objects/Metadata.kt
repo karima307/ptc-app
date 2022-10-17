@@ -1,7 +1,6 @@
 package android.ptc.com.ptcflixing.model.objects
 
-import com.example.example.Results
-import com.google.gson.annotations.SerializedName
+ import com.google.gson.annotations.SerializedName
 
 
 data class Metadata(

@@ -1,5 +1,6 @@
 package android.ptc.com.ptcflixing.model.repository
 
+import android.ptc.com.ptcflixing.helpers.Q
 import android.ptc.com.ptcflixing.model.database.AppDatabase
 import android.ptc.com.ptcflixing.model.database.dao.RemoteKeyDao
 import android.ptc.com.ptcflixing.model.database.dao.SearchResultsDao
@@ -87,8 +88,7 @@ class SearchResultsRemoteMediator(
     }
 
     override suspend fun initialize(): InitializeAction {
-        val remoteKey = remoteKeyDao.get()
-        return if (remoteKey == null) {
+        return if (Q.IS_CONNECTED) {
             InitializeAction.LAUNCH_INITIAL_REFRESH
         } else {
             InitializeAction.SKIP_INITIAL_REFRESH

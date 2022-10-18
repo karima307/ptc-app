@@ -8,6 +8,6 @@ data class Metadata(
     @SerializedName("sort") var sort: String? = null,
     @SerializedName("total_products") var totalProducts: Int? = null,
     @SerializedName("title") var title: String? = null,
-    @SerializedName("results") var searchResults: ArrayList<SearchResult> = arrayListOf()
+    @SerializedName("results") var searchResultModels: ArrayList<SearchResultModel> = arrayListOf()
 
 )

@@ -1,6 +1,6 @@
 package android.ptc.com.ptcflixing.view.components
 
-import android.ptc.com.ptcflixing.model.objects.SearchResult
+import android.ptc.com.ptcflixing.model.objects.SearchResultModel
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,7 +20,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 
 @Composable
-fun ResultItemList(result: SearchResult) {
+fun ResultItemList(result: SearchResultModel) {
     Card(
         elevation = 5.dp,
         modifier = Modifier
@@ -59,5 +59,5 @@ fun ResultItemList(result: SearchResult) {
 @Preview
 @Composable
 fun ResultItemListPreview() {
-    ResultItemList(result = SearchResult("SKUTEST", "3510", "Nokia", 10, 10))
+    ResultItemList(result = SearchResultModel("SKUTEST", "3510", "Nokia", 10, 10))
 }

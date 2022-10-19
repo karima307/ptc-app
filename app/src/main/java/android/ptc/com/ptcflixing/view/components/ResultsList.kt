@@ -1,6 +1,7 @@
 package android.ptc.com.ptcflixing.view.components
 
 import android.ptc.com.ptcflixing.viewmodel.SearchResultViewModel
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -14,8 +15,8 @@ fun ResultsList(searchResultViewModel: SearchResultViewModel) {
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-
-        // content padding
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
         contentPadding = PaddingValues(
             start = 12.dp,
             top = 16.dp,

@@ -16,6 +16,7 @@ class SearchResultsRepo(
 ) {
 
 
+
     fun getResultsWithRemoteMediator(): Flow<PagingData<SearchResultModel>> =
         Pager(
             PagingConfig(10),
